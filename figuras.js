@@ -22,9 +22,8 @@ function areaCuadrado(lado){
  * @param {number} base
  */
 function perimetroTriangulo (lado1, lado2, base){
-	return lado1 + lado2 + base;
+	return (lado1 + lado2) + base;
 }
-
 /**
  * @param {number} base
  * @param {number} altura
@@ -58,4 +57,52 @@ function perimetroCirculo(radio){
  */
 function areaCirculo(radio){
 	return (radio**2) * PI;
+}
+
+//Aqui calculamos los elementos del cuadrado
+function calcularPerimetroCuadrado(){
+	// @ts-ignore
+	const input = document.getElementById("cuadrado").value;
+	
+	const perimetro = perimetroCuadrado(input);
+	alert(perimetro);
+}
+function calcularAreaCuadrado(){
+	// @ts-ignore
+	const input = document.getElementById("cuadrado").value;
+	
+	const perimetro = areaCuadrado(input);
+	alert(perimetro);
+}
+
+//Aqui calculamos los elementos del triangulo
+function calcularPerimetroTriangulo(){
+	// @ts-ignore
+	const input = Number(document.getElementById("triangulo").value);
+	
+	const perimetro = perimetroTriangulo(input,input,input);
+	alert(perimetro);
+}
+function calcularAreatriangulo(){
+	// @ts-ignore
+	const input = document.getElementById("triangulo").value;
+	
+	const perimetro = areaTriangulo(input,input);
+	alert(perimetro);
+}
+
+//Aqui calculamos los elementos del circulo
+function calcularPerimetroCirculo(){
+	// @ts-ignore
+	const input = document.getElementById("circulo").value;
+	
+	const perimetro = perimetroCirculo(input);
+	alert(perimetro);
+}
+function calcularAreaCirculo(){
+	// @ts-ignore
+	const input = document.getElementById("circulo").value;
+	
+	const perimetro = areaCirculo(input);
+	alert(perimetro);
 }
